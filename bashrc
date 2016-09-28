@@ -134,6 +134,9 @@ fi
 # Don't check mail when opening terminal.
 unset MAILCHECK
 
+# Make sure thefuck works like intended.
+eval "$(thefuck --alias)"
+
 ################################################################################
 # bash-it configuration options                                                #
 ################################################################################

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Copies the config script from the repo to the users home directory.
+printf "Installing the Bash configuration script..."
+cp "$PWD/bashrc" "$HOME/.bashrc"
+printf " DONE.\n"
+echo "Now close a reopen the terminal so the changes can take effect."
+
+# Make sure bash-it is installed, and warn the user if it isn't.
+if ! [ -e "$HOME/.bash_it" ]; then
+	echo "BASH-IT is not installed. Some features will not work."
+fi
+
+# Make sure hstr is installed, and warn the user if it isn't.
+if ! [ -e "/usr/bin/hh" ]; then
+	echo "HSTR is not installed. History searching will not work."
+fi
